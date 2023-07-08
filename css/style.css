@@ -66,8 +66,11 @@ body{
     font-weight: bold;
     color: #fff;
 }
-
+header{
+    background: linear-gradient(to bottom,rgba(0, 0, 0, 0.8),rgba(0, 0, 0, 0))
+}
 .fixed{
+    background: none;
     background-color: rgba(255, 255, 255, 0.9);
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
 }
@@ -107,15 +110,18 @@ body{
 }
 .banner_box2{
     background: url(../images/main_banner_2_img_pc.jpg) no-repeat center center;
+    background-size: cover;
 }
 .banner_box3{
     background: url(../images/main_banner_3_img_pc.jpg) no-repeat center center;
+    background-size: cover;
 }
 .swiper-wrapper .banner_box1 video{
     position: absolute;
     top: 0;
     left: 50%;
     transform: translateX(-50%);
+    width: 100%;
 }
 
 
@@ -294,14 +300,14 @@ body{
 
   /* 각각의 요소 */
 .center li{
-    margin: 35px; 
+    margin: 35px 50px; 
 }
 .center li .slide_box{
     border-radius: 30px;
     background-color: #909090;
     overflow: hidden;
     width: 100%;
-    height: 547px;
+    height: 700px;
     position: relative;
 }
 .center li .slide_box .connect_img{
@@ -309,6 +315,7 @@ body{
     top: 0;
     left: 50%;
     transform: translateX(-50%);
+    width: 100%;
 }
 .center li .txt_box{
     position: absolute;
@@ -373,6 +380,7 @@ body{
 .section04{
     background: url(../images/main_contact_back.jpg) no-repeat center -128px;
     background-color: rgba(88, 88, 88, 0.2);
+    background-size: 100%;
     height: 940px;
     width: 100%;
     position: relative;
@@ -645,8 +653,24 @@ input::placeholder, textarea::placeholder {
     color: #fff;
     text-align: center;
 }
-
-
+/*---------------------------------max 2230---------------------------------*/
+@media (max-width:2230px){
+    .center li .slide_box{
+        height: 545px;
+    }
+}
+/*---------------------------------max 1950---------------------------------*/
+@media (max-width:1950px){
+    .swiper-wrapper .banner_box1 video{
+        width: auto;
+    }
+    .center li .slide_box .connect_img{
+        width: auto;
+    }
+    .section04{
+        background-size: auto;
+    }
+}
 /*---------------------------------max 1500---------------------------------*/
 @media (max-width:1500px){
     .PC_connect{
@@ -908,7 +932,7 @@ input::placeholder, textarea::placeholder {
 /*---------------------------------max 860---------------------------------*/
 @media (max-width:860px){
     /*메뉴 간격*/
-    header .header_in{
+    .pc .header_in{
         width: 85%;
     }
     header .header_in h1{
@@ -1040,6 +1064,16 @@ input::placeholder, textarea::placeholder {
 }
 
 
+/*---------------------------------max 700---------------------------------*/
+@media (max-width:700px){
+    /*메뉴 간격*/
+    .pc .header_in{
+        width: 90%;
+    }
+    header .header_in h1 {
+        margin-right: 20px;
+    }
+}
 
 /*---------------------------------max 680---------------------------------*/
 @media (max-width:680px){
@@ -1215,6 +1249,9 @@ input::placeholder, textarea::placeholder {
     }
 
   /* 배너 */
+    .swiper-container{
+        height: auto;
+    }
     .banner_box1{
         background: url(../images/main_banner_1_img_mobile.jpg) no-repeat center center;
     }
@@ -1229,13 +1266,13 @@ input::placeholder, textarea::placeholder {
     }
   /* 배너 글자, 컨트롤바 위치 */
     .swiper-button-prev {
-        bottom: 50px;
+        top: 575px;
     }
     .swiper-button-next {
-        bottom: 50px;
+        top: 575px;
     }
     .swiper-pagination-fraction, .swiper-pagination-custom, .swiper-container-horizontal > .swiper-pagination-bullets {
-        bottom: 47px;
+        top: 558px;
     }
     .main_banner_1_txt{
         width: 80%;

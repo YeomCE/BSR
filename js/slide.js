@@ -1,7 +1,7 @@
 $(function(){
   var swiper = new Swiper('.banner_wrap .swiper-container', {
      autoplay: {
-         delay: 6000,//슬라이드 넘어가는 시간
+         delay: 100000,//슬라이드 넘어가는 시간
          disableOnInteraction: false,
        },
        loop: true,//슬라이드 무한반복
